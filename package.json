@@ -1,0 +1,15 @@
+{
+  "name": "ledger-clear-signing-examples",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Add tests in test/clear_signing.test.ts\""
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "hardhat": "^2.17.0"
+  },
+  "dependencies": {
+    "ethers": "^6.0.0"
+  }
+}
