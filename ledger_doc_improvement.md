@@ -1,32 +1,32 @@
-# Improving Developer Onboarding and Clarity in Ledger's Clear Signing & ERC-7730 Documentation
+Improving Developer Onboarding and Clarity in Ledger's Clear Signing & ERC-7730 Documentation
 
-## 1. 🔍 Current Developer Experience: Overview & Gaps
+1. Current Developer Experience: Overview & Gaps
 
-### Clear Signing
+Clear Signing
 
-- **Strengths**: Concept well-explained with real-world rationale (protection against blind signing).
-- **Gaps**:
+- Strengths: Concept well-explained with real-world rationale (protection against blind signing).
+- Gaps:
   - No full working example of an ERC-20 transfer using Clear Signing.
   - Lack of onboarding clarity on how to test and debug Clear Signing flows.
   - No direct information on firmware compatibility.
 
-### ERC-7730 Specification
+ERC-7730 Specification
 
-- **Strengths**: Formal and well-structured EIP.
-- **Gaps**:
+- Strengths: Formal and well-structured EIP.
+- Gaps:
   - No walkthrough on how to generate a compliant payload from a dApp.
   - No sample annotated payload with detailed explanation.
   - Missing real-world use case demonstration (e.g., swap, permit).
 
-### Device Management Kit
+Device Management Kit
 
-- **Gap**: Documentation appears fragmented or incomplete. No entry point or end-to-end flow.
+- Gap: Documentation appears fragmented or incomplete. No entry point or end-to-end flow.
 
 ---
 
-## 2. ✨ Suggestions for Documentation Improvements
+2. ✨ Suggestions for Documentation Improvements
 
-### 📌 Add a "Quick Start" Guide
+Add a "Quick Start" Guide
 
 Create a dedicated page with step-by-step onboarding for:
 
@@ -51,7 +51,7 @@ Create a dedicated page with step-by-step onboarding for:
 }
 ```
 
-### 📁 Provide a Compatibility Matrix
+Provide a Compatibility Matrix
 
 ```md
 | Feature                 | Ethereum App >= | Firmware >= |
@@ -60,7 +60,7 @@ Create a dedicated page with step-by-step onboarding for:
 | ERC-7730 Support       | TBD              | TBD          |
 ```
 
-### ✍️ Improve Code Snippets
+Improve Code Snippets
 
 - Provide real dApp payloads for developers to copy/paste.
 - Add `ethers.js` and `web3.js` usage examples.
@@ -72,27 +72,27 @@ const signature = await signer._signTypedData(domain, types, value);
 
 ---
 
-## 3. 🧰 Developer UX & Navigation Suggestions
+Developer UX & Navigation Suggestions
 
-### Navigation Restructure
+Navigation Restructure
 
 - Add "Beginner → Intermediate → Advanced" path per topic.
 - Tag pages by use case (e.g., "dApp Integration", "Testing", "Security")
 - Cross-link with Ledger Live test flows (sandbox mode?)
 
-### Add Tooling
+Add Tooling
 
 - Provide a JSON builder playground (live editor)
 - Add a "Test this flow on StackBlitz" button next to snippets
 
-### Visual Aids
+Visual Aids
 
 - Use diagrams to explain data flow: dApp → Wallet → Display → Signature
 - GIFs or screen captures of a real Ledger device showing Clear Signing UX
 
 ---
 
-## 4. ✅ Deliverables
+4. Deliverables
 
 | Type         | Description                                           |
 | ------------ | ----------------------------------------------------- |
@@ -102,7 +102,7 @@ const signature = await signer._signTypedData(domain, types, value);
 
 ---
 
-## 5. 🎯 Expected Impact
+5. Expected Impact
 
 - Faster onboarding: get to first signature in < 1 hour.
 - Safer integration: less blind signing by developers.
@@ -110,38 +110,38 @@ const signature = await signer._signTypedData(domain, types, value);
 
 ---
 
-## 🚀 Bonus Suggestion: "Ledger Dev Cookbook"
+Bonus Suggestion: "Ledger Dev Cookbook"
 
 A practical guide with self-contained, real-world recipes to help developers adopt and master Ledger integrations.
 
-### 📚 Chapters Overview
+Chapters Overview
 
-#### 1. Clear Signing for Beginners
+1. Clear Signing for Beginners
 - How to enable Clear Signing on device
 - Visual expectations on Ledger display
 - Signing an ERC-20 transaction end-to-end
 
-#### 2. Using ERC-7730 in Real-World dApps
+2. Using ERC-7730 in Real-World dApps
 - Building metadata payloads
 - Integrating swap flows
 - Structuring payloads for UI clarity
 
-#### 3. Permit and EIP-2612 Signing
+3. Permit and EIP-2612 Signing
 - Building typed data for `permit()`
 - Ledger handling of typed signatures
 - Risks and signature verification
 
-#### 4. Hardhat + Ledger Setup
+4. Hardhat + Ledger Setup
 - Using Hardhat with hardware wallets
 - Unit testing signed payloads
 - Local testnets and Ledger signing
 
-#### 5. UX Best Practices with Ledger
+5. UX Best Practices with Ledger
 - Designing wallet-friendly UX
 - Prompting user before signing
 - Error handling and rejection cases
 
-#### 6. Security Pitfalls to Avoid
+6. Security Pitfalls to Avoid
 - Common mistakes in blind signing
 - Double-checking display fields
 - Preventing malicious dApp interactions
